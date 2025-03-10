@@ -1,39 +1,73 @@
-import random
-import string
-from datetime import datetime
+# a = 10
+# b = 20
+# c = a + b
+# print( a, "+", b, "=", c)
 
-# 获取当前时间
-Time_now = datetime.now()
+# a = 50
+# b = 10
+# c = a - b
+# print(a, "-", b, "=", c)
 
-def generate_random_numbers_30(length=30):
-    # 生成一个包含20个随机数字的字符串
-    random_numbers = ''.join(str(random.randint(0, 9)) for _ in range(length))
-    return random_numbers
+# a = 100
+# b = 50
+# c = a * b
+# print(a, "*", b, "=", c)
 
-def generate_random_numbers_8(length=8):
-    # 生成一个包含20个随机数字的字符串
-    random_numbers = ''.join(str(random.randint(0, 9)) for _ in range(length))
-    return random_numbers
+# a = 20
+# b = 4
+# c = a / b
+# print(a, "/", b, "=", c)
 
-# def generate_random_letters(length=8):
-#     letters = string.ascii_letters  # 包含大小写字母
-#     random_string = ''.join(random.choice(letters) for i in range(length))
-#     return random_string
+# a = 10
+# b = 3
+# c = a % b
+# print(a, "%", b, "=", c)
 
-def generate_random_letters_and_numbers_8(length=8):
-    # 定义字母和数字的集合
-    characters = string.ascii_letters + string.digits
-    # 随机选择字符并生成字符串
-    random_letters_and_numbers = ''.join(random.choice(characters) for _ in range(length))
-    return random_letters_and_numbers
+# a = 10
+# b = 5
+# c = a ** b
+# print(a, "**", b, "=", c)     # 10^5 = 100000    
 
-print("门店：微盟广告（上海）有限公司")
-print("订单号：",generate_random_numbers_8())
-print("商户订单号：",generate_random_letters_and_numbers_8())
-print("微信支付交易号：",generate_random_numbers_30())
-print("结账时间：", Time_now.strftime("%Y-%m-%d %H:%M:%S"))
-print("==================")
-print("消费总额：¥100.00")
-print("优惠金额：¥0.00")
-print("应付金额：¥100.00")
+# a = 10
+# b = 3
+# c = a // b
+# print(a, "//", b, "=", c)     # 10//3 = 3
 
+# a = 10
+# b = 3
+# c = a & b
+# print(a, "&", b, "=", c)     # 10&3 = 2
+
+# a = 10
+# b = 3
+# c = a | b
+# print(a, "|", b, "=", c)     # 10|3 = 11
+
+# a = 10
+# b = 3
+# c = a ^ b
+# print(a, "^", b, "=", c)     # 10^3 = 9
+
+# a = 10
+# b = 3
+# c = a << b
+# print(a, "<<", b, "=", c)     # 10<<3 = 80
+
+# a = 10
+# b = 3
+# c = a >> b
+# print(a, ">>", b, "=", c)     # 10>>3 = 1
+
+a,b,c = (input("请输入三角形三边的长：").split())
+a= int(a)
+b= int(b)
+c= int(c)
+
+#计算三角形的半周长p
+p=(a+b+c)/2
+
+#计算三角形的面积s
+s=(p*(p-a)*(p-b)*(p-c))**0.5
+
+#输出三角形的面积
+print("三角形面积为：",format(s,'.2f'))
